@@ -10,7 +10,7 @@ using Android.OS;
 namespace MapTest
 {
     [Activity(Label = "MapTest", MainLauncher = true, Icon = "@drawable/icon")]
-    public class Activity1 : Activity
+    public class MainActivity : Activity
     {
         int count = 1;
 
