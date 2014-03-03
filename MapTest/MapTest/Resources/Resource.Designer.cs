@@ -244,11 +244,11 @@ namespace MapTest
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050005
-			public const int MyButton = 2131034117;
-			
 			// aapt resource value: 0x7f050004
 			public const int hybrid = 2131034116;
+			
+			// aapt resource value: 0x7f050005
+			public const int map = 2131034117;
 			
 			// aapt resource value: 0x7f050000
 			public const int none = 2131034112;
