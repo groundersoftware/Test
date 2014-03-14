@@ -23,7 +23,7 @@
 	<permission android:name="com.groundersoftware.maptest.permission.MAPS_RECEIVE" android:protectionLevel="signature" />
 	<application android:label="MapTest">
 		<!-- Put your Google Maps V2 API Key here. -->
-		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyD_mz18iRg_kpQZ7m9VrdFg6PxZfUzuBvE" />
+		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyBjEceXe6CSUmCi2yGHtS56CIqdta-0Y0s" />
 		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
 	</application>
 </manifest>
