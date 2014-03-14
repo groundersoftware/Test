@@ -16,7 +16,7 @@ using log4net.Config;
 using System.IO;
 #endif
 
-namespace JobDispatch.Client.Core.Utils
+namespace DiscoverMe.Client.Core.Utils
 {
     public class Logger
     {

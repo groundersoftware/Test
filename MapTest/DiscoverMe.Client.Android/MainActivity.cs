@@ -8,8 +8,9 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using DiscoverMe.Client.Android;
 
-namespace MapTest
+namespace DiscoverMe.Client.Android
 {
     [Activity(Label = "MapTest", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity

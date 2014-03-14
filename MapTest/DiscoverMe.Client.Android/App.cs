@@ -3,7 +3,7 @@ using Android.App;
 using Android.Runtime;
 using JobDispatch.Client.Core.Utils;
 
-namespace MapTest
+namespace DiscoverMe.Client.Android
 {
     [Application]
     public class App : Application

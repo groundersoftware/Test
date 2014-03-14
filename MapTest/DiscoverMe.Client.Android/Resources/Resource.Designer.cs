@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("MapTest.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("DiscoverMe.Client.Android.Resource", IsApplication=true)]
 
-namespace MapTest
+namespace DiscoverMe.Client.Android
 {
 	
 	
