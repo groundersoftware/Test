@@ -1,18 +1,10 @@
-﻿using System;
-
-using Android.App;
-using Android.Gms.Maps.Model;
-using Android.Content;
+﻿using Android.App;
 using Android.Gms.Maps;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
-using DiscoverMe.Client.Android;
 
 namespace DiscoverMe.Client.Android
 {
-    [Activity(Label = "MapTest", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "DiscoverMe", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
         /// <summary>Map fragment</summary>

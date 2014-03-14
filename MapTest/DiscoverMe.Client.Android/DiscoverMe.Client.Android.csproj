@@ -85,7 +85,7 @@
     </XamarinComponentReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DiscoverMe.Client.Core.Android\DiscoverMe.Client.Core.Android.csproj">
+    <ProjectReference Include="..\DiscoverMe.Client.Core\DiscoverMe.Client.Core.Android.csproj">
       <Project>{5a9ac992-01fe-4a7d-8dca-574f38e422b5}</Project>
       <Name>DiscoverMe.Client.Core.Android</Name>
     </ProjectReference>
