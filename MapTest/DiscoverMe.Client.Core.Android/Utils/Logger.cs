@@ -16,12 +16,12 @@ using log4net.Config;
 using System.IO;
 #endif
 
-namespace JobDispatch.Client.Core.Utils
+namespace DiscoverMe.Client.Core.Utils
 {
     public class Logger
     {
 #if __FILE_LOGGING__
-        private const string LOGFILE = "JobDispatch.log";
+        private const string LOGFILE = "discoverme.log";
         private static readonly object _logLocker = new object();
 #endif
 

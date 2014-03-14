@@ -1,7 +1,7 @@
 using System;
 using Android.App;
 using Android.Runtime;
-using JobDispatch.Client.Core.Utils;
+using DiscoverMe.Client.Core.Utils;
 
 namespace DiscoverMe.Client.Android
 {
