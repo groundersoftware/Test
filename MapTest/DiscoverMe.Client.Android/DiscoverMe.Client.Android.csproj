@@ -46,8 +46,9 @@
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GooglePlayServicesLib">
-      <HintPath>..\Components\googleplayservicesjellybean-15.0\lib\android\GooglePlayServicesLib.dll</HintPath>
+    <Reference Include="GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\googleplayservicesjellybean-16.0\lib\android\GooglePlayServicesLib.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
@@ -79,16 +80,16 @@
     <Content Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <XamarinComponentReference Include="googleplayservicesjellybean">
-      <Visible>False</Visible>
-      <Version>15.0</Version>
-    </XamarinComponentReference>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\DiscoverMe.Client.Core\DiscoverMe.Client.Core.Android.csproj">
       <Project>{5a9ac992-01fe-4a7d-8dca-574f38e422b5}</Project>
       <Name>DiscoverMe.Client.Core.Android</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="googleplayservicesjellybean">
+      <Visible>False</Visible>
+      <Version>16.0</Version>
+    </XamarinComponentReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
