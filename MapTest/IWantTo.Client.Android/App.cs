@@ -1,9 +1,9 @@
 using System;
 using Android.App;
 using Android.Runtime;
-using DiscoverMe.Client.Core.Utils;
+using IWantTo.Client.Core.Utils;
 
-namespace DiscoverMe.Client.Android
+namespace IWantTo.Client.Android
 {
     [Application]
     public class App : Application

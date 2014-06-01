@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscoverMe.Client.Core", "DiscoverMe.Client.Core\DiscoverMe.Client.Core.csproj", "{6D14BD1F-CCAE-422A-93FA-31E91AD9BF4D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IWantTo.Client.Core", "IWantTo.Client.Core\IWantTo.Client.Core.csproj", "{6D14BD1F-CCAE-422A-93FA-31E91AD9BF4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscoverMe.Client.Android", "DiscoverMe.Client.Android\DiscoverMe.Client.Android.csproj", "{DBA9D973-DD27-4FE9-B4EB-4D734E3C4F96}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IWantTo.Client.Android", "IWantTo.Client.Android\IWantTo.Client.Android.csproj", "{DBA9D973-DD27-4FE9-B4EB-4D734E3C4F96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscoverMe.Client.Core.Android", "DiscoverMe.Client.Core\DiscoverMe.Client.Core.Android.csproj", "{5A9AC992-01FE-4A7D-8DCA-574F38E422B5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IWantTo.Client.Core.Android", "IWantTo.Client.Core\IWantTo.Client.Core.Android.csproj", "{5A9AC992-01FE-4A7D-8DCA-574F38E422B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscoverMe.WebService", "DiscoverMe.WebService\DiscoverMe.WebService.csproj", "{15B3E0D2-6217-493A-A690-158C497F5318}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IWantTo.WebService", "IWantTo.WebService\IWantTo.WebService.csproj", "{15B3E0D2-6217-493A-A690-158C497F5318}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

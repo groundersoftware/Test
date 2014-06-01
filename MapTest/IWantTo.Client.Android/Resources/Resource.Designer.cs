@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("DiscoverMe.Client.Android.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("IWantTo.Client.Android.Resource", IsApplication=true)]
 
-namespace DiscoverMe.Client.Android
+namespace IWantTo.Client.Android
 {
 	
 	

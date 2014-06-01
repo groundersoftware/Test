@@ -2,9 +2,9 @@
 using Android.Gms.Maps;
 using Android.OS;
 
-namespace DiscoverMe.Client.Android
+namespace IWantTo.Client.Android
 {
-    [Activity(Label = "DiscoverMe", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "IWantTo", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
         /// <summary>Map fragment</summary>

@@ -9,8 +9,8 @@
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DiscoverMe.Client.Android</RootNamespace>
-    <AssemblyName>DiscoverMe</AssemblyName>
+    <RootNamespace>IWantTo.Client.Android</RootNamespace>
+    <AssemblyName>IWantTo</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <AndroidApplication>true</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
@@ -80,9 +80,9 @@
     <Content Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DiscoverMe.Client.Core\DiscoverMe.Client.Core.Android.csproj">
+    <ProjectReference Include="..\IWantTo.Client.Core\IWantTo.Client.Core.Android.csproj">
       <Project>{5a9ac992-01fe-4a7d-8dca-574f38e422b5}</Project>
-      <Name>DiscoverMe.Client.Core.Android</Name>
+      <Name>IWantTo.Client.Core.Android</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
