@@ -1,11 +1,12 @@
 ﻿using Android.App;
 using Android.Gms.Maps;
 using Android.OS;
+using IWantTo.Client.Android.Screens.Base;
 
-namespace IWantTo.Client.Android
+namespace IWantTo.Client.Android.Screens.Main
 {
     [Activity(Label = "IWantTo", MainLauncher = true, Icon = "@drawable/icon")]
-    public class MainActivity : Activity
+    public class MainActivity : BaseActivity
     {
         /// <summary>Map fragment</summary>
         private MapFragment _mapFragment;
