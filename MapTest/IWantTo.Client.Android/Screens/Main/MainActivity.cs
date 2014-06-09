@@ -2,6 +2,7 @@
 using Android.Gms.Maps;
 using Android.OS;
 using IWantTo.Client.Android.Screens.Base;
+using IWantTo.Client.Core.DataStorage;
 
 namespace IWantTo.Client.Android.Screens.Main
 {
