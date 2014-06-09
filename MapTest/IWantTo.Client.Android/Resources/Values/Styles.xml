@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.NoTitle" parent="Theme.Sherlock.Light">
+        <item name="actionBarStyle">@style/Widget.NoTitle.ActionBar</item>
+        <item name="android:actionBarStyle">@style/Widget.NoTitle.ActionBar</item>
+        <item name="android:windowBackground">@color/application_background</item>
+        <item name="android:colorBackground">@color/application_background</item>
+    </style>    
+
+    <style name="Widget.NoTitle.ActionBar" parent="Widget.Sherlock.ActionBar">
+        <item name="android:background">@color/actionbar_background</item>
+        <item name="background">@color/actionbar_background</item>
+        <item name="android:titleTextStyle">@style/Widget.NoTitle.ActionBar.TitleTextStyle</item>
+        <item name="indeterminateProgressStyle">@style/Widget.NoTitle.ActionBar.IndeterminateProgressBar</item>
+        <item name="android:indeterminateProgressStyle">@style/Widget.NoTitle.ActionBar.IndeterminateProgressBar</item>
+    </style>
+
+    <style name="Widget.NoTitle.ActionBar.IndeterminateProgressBar" parent="@android:style/Widget.Holo.ProgressBar.Small">        
+        <item name="android:minWidth">28dp</item>
+        <item name="android:maxWidth">28dp</item>
+        <item name="android:minHeight">28dp</item>
+        <item name="android:maxHeight">28dp</item>
+    </style>
+    
+    <style name="Widget.NoTitle.ActionBar.TitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/actionbar_text</item>
+    </style>
+</resources>

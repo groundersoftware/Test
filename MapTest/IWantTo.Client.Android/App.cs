@@ -17,7 +17,9 @@ namespace IWantTo.Client.Android
 
         public override void OnCreate()
         {
-            _log.Info("Application is starting");
+            _log.Info("===============================");
+            _log.Info(">>> Application is starting <<<");
+            _log.Info("===============================");
 
             base.OnCreate();
 
@@ -30,9 +32,11 @@ namespace IWantTo.Client.Android
             AppDomain.CurrentDomain.UnhandledException -= HandleUnhandledException;
             AndroidEnvironment.UnhandledExceptionRaiser -= UnhandledExceptionHandler;
 
-            base.Dispose(disposing);
+            _log.Info("===============================");
+            _log.Info(">>> Application is disposed <<<");
+            _log.Info("===============================");
 
-            _log.Info("Application is disposed.");
+            base.Dispose(disposing);
         }
 
         /// <summary>

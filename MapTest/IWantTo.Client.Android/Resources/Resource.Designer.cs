@@ -438,17 +438,26 @@ namespace IWantTo.Client.Android
 			// aapt resource value: 0x7f04000d
 			public const int abs__bright_foreground_holo_light = 2130968589;
 			
-			// aapt resource value: 0x7f040010
-			public const int abs__primary_text_disable_only_holo_dark = 2130968592;
+			// aapt resource value: 0x7f040013
+			public const int abs__primary_text_disable_only_holo_dark = 2130968595;
+			
+			// aapt resource value: 0x7f040014
+			public const int abs__primary_text_disable_only_holo_light = 2130968596;
+			
+			// aapt resource value: 0x7f040015
+			public const int abs__primary_text_holo_dark = 2130968597;
+			
+			// aapt resource value: 0x7f040016
+			public const int abs__primary_text_holo_light = 2130968598;
 			
 			// aapt resource value: 0x7f040011
-			public const int abs__primary_text_disable_only_holo_light = 2130968593;
+			public const int actionbar_background = 2130968593;
 			
 			// aapt resource value: 0x7f040012
-			public const int abs__primary_text_holo_dark = 2130968594;
+			public const int actionbar_text = 2130968594;
 			
-			// aapt resource value: 0x7f040013
-			public const int abs__primary_text_holo_light = 2130968595;
+			// aapt resource value: 0x7f040010
+			public const int application_background = 2130968592;
 			
 			// aapt resource value: 0x7f040009
 			public const int common_action_bar_splitter = 2130968585;
@@ -480,11 +489,11 @@ namespace IWantTo.Client.Android
 			// aapt resource value: 0x7f040005
 			public const int common_signin_btn_light_text_pressed = 2130968581;
 			
-			// aapt resource value: 0x7f040014
-			public const int common_signin_btn_text_dark = 2130968596;
+			// aapt resource value: 0x7f040017
+			public const int common_signin_btn_text_dark = 2130968599;
 			
-			// aapt resource value: 0x7f040015
-			public const int common_signin_btn_text_light = 2130968597;
+			// aapt resource value: 0x7f040018
+			public const int common_signin_btn_text_light = 2130968600;
 			
 			static Color()
 			{
@@ -1275,11 +1284,11 @@ namespace IWantTo.Client.Android
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f060029
-			public const int ApplicationName = 2131099689;
-			
 			// aapt resource value: 0x7f060028
-			public const int Hello = 2131099688;
+			public const int ApplicationName = 2131099688;
+			
+			// aapt resource value: 0x7f060029
+			public const int MenuExit = 2131099689;
 			
 			// aapt resource value: 0x7f06001b
 			public const int abs__action_bar_home_description = 2131099675;
@@ -1525,6 +1534,9 @@ namespace IWantTo.Client.Android
 			// aapt resource value: 0x7f0a0044
 			public const int TextAppearance_Sherlock_Widget_TextView_SpinnerItem = 2131361860;
 			
+			// aapt resource value: 0x7f0a0059
+			public const int Theme_NoTitle = 2131361881;
+			
 			// aapt resource value: 0x7f0a0054
 			public const int Theme_Sherlock = 2131361876;
 			
@@ -1542,6 +1554,15 @@ namespace IWantTo.Client.Android
 			
 			// aapt resource value: 0x7f0a0000
 			public const int Widget = 2131361792;
+			
+			// aapt resource value: 0x7f0a005a
+			public const int Widget_NoTitle_ActionBar = 2131361882;
+			
+			// aapt resource value: 0x7f0a005b
+			public const int Widget_NoTitle_ActionBar_IndeterminateProgressBar = 2131361883;
+			
+			// aapt resource value: 0x7f0a005c
+			public const int Widget_NoTitle_ActionBar_TitleTextStyle = 2131361884;
 			
 			// aapt resource value: 0x7f0a0002
 			public const int Widget_Sherlock_ActionBar = 2131361794;

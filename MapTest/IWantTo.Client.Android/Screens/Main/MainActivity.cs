@@ -5,7 +5,7 @@ using IWantTo.Client.Android.Screens.Base;
 
 namespace IWantTo.Client.Android.Screens.Main
 {
-    [Activity(Label = "IWantTo", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Name = "iwantto.activity.mainactivity", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : BaseActivity
     {
         /// <summary>Map fragment</summary>
@@ -13,7 +13,12 @@ namespace IWantTo.Client.Android.Screens.Main
 
         protected override void OnCreate(Bundle bundle)
         {
+            // set application menu according to particular activity
+            MenuItemsMask = ((uint)MenuItemEnum.Exit);
+
             base.OnCreate(bundle);
+
+            SupportActionBar.SetDisplayShowTitleEnabled(false);
 
             _mapFragment = MapFragment.NewInstance();
             var tx = FragmentManager.BeginTransaction();

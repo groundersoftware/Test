@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Hello">Hello World, Click Me!</string>
-    <string name="ApplicationName">MapTest</string>
+
+  <!-- Application -->
+  <string name="ApplicationName">I Want To</string>
+
+  <!-- Menu -->
+  <string name="MenuExit">Exit</string>
 </resources>
