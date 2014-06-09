@@ -2,7 +2,7 @@
 using Android.Gms.Maps;
 using Android.OS;
 using IWantTo.Client.Android.Screens.Base;
-using IWantTo.Client.Core.DataStorage;
+using IWantTo.Client.Core.Services;
 
 namespace IWantTo.Client.Android.Screens.Main
 {
@@ -28,6 +28,8 @@ namespace IWantTo.Client.Android.Screens.Main
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
+
+            var dbVersion = ConfigurationService.Instance.DatabaseVersion;
         }
 
         protected override void OnResume()

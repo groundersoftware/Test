@@ -58,7 +58,7 @@ namespace IWantTo.Client.Core.DataStorage
 #else
                 var libraryPath = string.Empty;
 #endif
-                return Path.Combine(libraryPath, "JobDispatchDB.db3");
+                return Path.Combine(libraryPath, "IWantTo.db3");
             }
         }
 
