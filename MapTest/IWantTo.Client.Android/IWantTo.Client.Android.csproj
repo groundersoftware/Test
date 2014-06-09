@@ -21,7 +21,7 @@
     <AndroidSupportedAbis>armeabi,armeabi-v7a,x86</AndroidSupportedAbis>
     <AndroidStoreUncompressedFileExtensions />
     <MandroidI18n />
-    <JavaMaximumHeapSize />
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
     <JavaOptions />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -46,6 +46,9 @@
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ActionBarSherlock">
+      <HintPath>..\Components\XamarinActionBarSherlock-4.4.0.4\lib\android\ActionBarSherlock.dll</HintPath>
+    </Reference>
     <Reference Include="GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Components\googleplayservicesjellybean-16.0\lib\android\GooglePlayServicesLib.dll</HintPath>
@@ -56,6 +59,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\Components\XamarinActionBarSherlock-4.4.0.4\lib\android\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
@@ -89,6 +95,14 @@
     <XamarinComponentReference Include="googleplayservicesjellybean">
       <Visible>False</Visible>
       <Version>16.0</Version>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="xamandroidsupportv4-18">
+      <Visible>False</Visible>
+      <Version>19.1.0</Version>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="XamarinActionBarSherlock">
+      <Visible>False</Visible>
+      <Version>4.4.0.4</Version>
     </XamarinComponentReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

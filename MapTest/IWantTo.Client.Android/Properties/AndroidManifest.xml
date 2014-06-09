@@ -15,7 +15,7 @@
 	<uses-permission android:name="android.permission.READ_GSERVICES" />
 	<uses-permission android:name="android.permission.MAPS_RECEIVE" />
 	<permission android:name="com.groundersoftware.maptest.permission.MAPS_RECEIVE" android:protectionLevel="signature" />
-	<application android:label="IWantTo">
+	<application android:label="IWantTo" android:icon="@drawable/Icon">
 		<!-- Put your Google Maps V2 API Key here. -->
 		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyAOAqC-6SgpKrN-Chbic-j5O-MP5nqY3Gc" />
 		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
