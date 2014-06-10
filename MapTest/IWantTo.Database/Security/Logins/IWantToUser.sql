@@ -1,0 +1,1 @@
+﻿CREATE LOGIN [IWantToUser] WITH PASSWORD = 'Heslo92701'
