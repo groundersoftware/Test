@@ -7,6 +7,7 @@ using Android.Widget;
 using IWantTo.Client.Android.Screens.Base;
 using IWantTo.Client.Android.Screens.Drawer;
 using IWantTo.Client.Core.Services;
+using IMenuItem = Xamarin.ActionbarSherlockBinding.Views.IMenuItem;
 
 namespace IWantTo.Client.Android.Screens.Main
 {
@@ -17,7 +18,7 @@ namespace IWantTo.Client.Android.Screens.Main
         private MapFragment _mapFragment;
 
         /// <summary>Menu drawer</summary>
-        private DrawerLayout _drawer;
+        private DrawerLayout _drawerLayout;
         private ListView _drawerList;
         private MyActionBarDrawerToggle _drawerToggle;
 
@@ -38,17 +39,20 @@ namespace IWantTo.Client.Android.Screens.Main
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
-            _drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
+            _drawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
+            _drawerLayout.SetDrawerShadow(Resource.Drawable.drawer_shadow_dark, (int)GravityFlags.Start);
             _drawerList = FindViewById<ListView>(Resource.Id.left_drawer);
-            _drawer.SetDrawerShadow(Resource.Drawable.drawer_shadow_dark, (int)GravityFlags.Start);
 
             _drawerList.Adapter = new DrawerListAdapter(this);
             _drawerList.ItemClick += (sender, args) => SelectDrawerMenuItem(args.Position);
 
             // DrawerToggle is the animation that happens with the indicator next to the ActionBar icon. 
-            _drawerToggle = new MyActionBarDrawerToggle(this, _drawer, Resource.Drawable.ic_navigation_drawer, Resource.String.DrawerOpen, Resource.String.DrawerClose);
-            _drawer.SetDrawerListener(_drawerToggle);
+            _drawerToggle = new MyActionBarDrawerToggle(this, _drawerLayout, Resource.Drawable.ic_navigation_drawer, Resource.String.DrawerOpen, Resource.String.DrawerClose);
+            _drawerLayout.SetDrawerListener(_drawerToggle);
 
+            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+            SupportActionBar.SetHomeButtonEnabled(true);
+            SupportActionBar.SetDisplayShowTitleEnabled(false);
 
             var dbVersion = ConfigurationService.Instance.DatabaseVersion;
         }
@@ -76,13 +80,38 @@ namespace IWantTo.Client.Android.Screens.Main
         }
 
         /// <summary>
+        /// Overriden method for handling Home button for left drawer menu.
+        /// </summary>
+        /// <param name="item">Seleected menu item.</param>
+        /// <returns>True if selected menu item was processed or not.</returns>
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            // handle Home button in this activity for closing and opening menu drawer
+            if (item.ItemId == global::Android.Resource.Id.Home)
+            {
+                if (_drawerLayout.IsDrawerOpen((int)GravityFlags.Left))
+                {
+                    _drawerLayout.CloseDrawer((int)GravityFlags.Left);
+                }
+                else
+                {
+                    _drawerLayout.OpenDrawer((int)GravityFlags.Left);
+                }
+
+                return true;
+            }
+
+            return base.OnOptionsItemSelected(item);
+        }
+
+        /// <summary>
         /// Handler for selecting menu item in drawer.
         /// </summary>
         /// <param name="position">Position of selected menu item.</param>
         private void SelectDrawerMenuItem(int position)
         {
             _drawerList.SetItemChecked(position, true);
-            _drawer.CloseDrawers();
+            _drawerLayout.CloseDrawer((int)GravityFlags.Left);
 
             // find activated menu item and start a particular action
             var selectedItem = (DrawerItem)_drawerList.GetItemAtPosition(position);
