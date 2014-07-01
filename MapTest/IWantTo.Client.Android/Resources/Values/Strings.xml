@@ -5,5 +5,12 @@
   <string name="ApplicationName">I Want To</string>
 
   <!-- Menu -->
+  <string name="MenuAbout">About</string>
+  <string name="MenuSettings">Settings</string>
   <string name="MenuExit">Exit</string>
+
+  <!-- Menu Drawer -->
+  <string name="DrawerOpen">Open</string>
+  <string name="DrawerClose">Close</string>
+
 </resources>

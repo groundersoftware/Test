@@ -1,7 +1,6 @@
 using Android.App;
 using Android.Content;
 using Android.OS;
-
 using IWantTo.Client.Core.Utils;
 
 using Xamarin.ActionbarSherlockBinding.App;
@@ -41,8 +40,32 @@ namespace IWantTo.Client.Android.Screens.Base
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
-            switch ((MenuItemEnum)item.ItemId)
+            if (!PressMenuItem((MenuItemEnum)item.ItemId))
             {
+                // close activity in other case - it is Back button implementation on Action Bar
+                Finish();
+            }
+
+            return true;
+        }
+
+        /// <summary>
+        /// Activate a particular menu.
+        /// </summary>
+        /// <param name="menuItem">Menu Item.</param>
+        /// <returns>True if menu was found and activated, otherwise false.</returns>
+        protected bool PressMenuItem(MenuItemEnum menuItem)
+        {
+            switch (menuItem)
+            {
+                case MenuItemEnum.Settings:
+                {
+                    return true;
+                }
+                case MenuItemEnum.About:
+                {
+                    return true;
+                }
                 case MenuItemEnum.Exit:
                 {
                     MenuExit();
@@ -50,12 +73,11 @@ namespace IWantTo.Client.Android.Screens.Base
                 }
                 default:
                 {
-                    // close activity in other case - it is Back button implementation on Action Bar
-                    Finish();
-                    return true;
+                    return false;
                 }
             }
         }
+
 
         public override bool OnCreateOptionsMenu(IMenu menu)
         {

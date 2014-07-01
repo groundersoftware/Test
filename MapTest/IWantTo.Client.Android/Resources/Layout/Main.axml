@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/map"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent" />
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<!-- The main content view -->
+    <LinearLayout
+        android:id="@+id/map"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+<!-- The navigation drawer -->
+    <RelativeLayout
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/application_background"
+        android:orientation="vertical">
+        <ListView
+            android:id="@+id/left_drawer"
+            android:layout_alignParentTop="true"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:choiceMode="singleChoice"
+            android:divider="@color/horizontal_separator_line"
+            android:dividerHeight="1dp"
+            android:background="@color/drawer_background" />
+    <!--    
+    <ImageView
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="false"
+        android:scaleType="center"
+        android:background="@color/application_background"
+        android:src="@drawable/drawer_logo" />
+-->
+    </RelativeLayout>
+</android.support.v4.widget.DrawerLayout>

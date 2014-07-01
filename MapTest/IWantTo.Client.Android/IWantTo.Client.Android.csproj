@@ -70,11 +70,15 @@
     <Compile Include="Screens\Base\BaseActivity.cs" />
     <Compile Include="Screens\Base\MenuItemEntry.cs" />
     <Compile Include="Screens\Base\MenuItemEnum.cs" />
+    <Compile Include="Screens\Drawer\DrawerItem.cs" />
+    <Compile Include="Screens\Drawer\DrawerListAdapter.cs" />
+    <Compile Include="Screens\Drawer\MyActionBarDrawerToggle.cs" />
     <Compile Include="Screens\Main\MainActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
+    <AndroidResource Include="Resources\Layout\DrawerListItem.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Layout\Main.axml" />
@@ -89,6 +93,30 @@
     <Content Include="Properties\AndroidManifest.xml" />
     <AndroidResource Include="Resources\Values\Styles.xml" />
     <AndroidResource Include="Resources\Values\Colors.xml" />
+    <AndroidResource Include="Resources\Drawable-hdpi\drawer_shadow_dark.9.png" />
+    <AndroidResource Include="Resources\Drawable-hdpi\drawer_shadow_light.9.png" />
+    <AndroidResource Include="Resources\Drawable-hdpi\ic_drawer_about.png" />
+    <AndroidResource Include="Resources\Drawable-hdpi\ic_drawer_logout.png" />
+    <AndroidResource Include="Resources\Drawable-hdpi\ic_drawer_settings.png" />
+    <AndroidResource Include="Resources\Drawable-hdpi\ic_navigation_drawer.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\drawer_shadow_dark.9.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\drawer_shadow_light.9.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\ic_drawer_about.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\ic_drawer_logout.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\ic_drawer_settings.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\ic_navigation_drawer.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\drawer_shadow_dark.9.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\drawer_shadow_light.9.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\ic_drawer_about.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\ic_drawer_logout.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\ic_drawer_settings.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\ic_navigation_drawer.png" />
+    <AndroidResource Include="Resources\Drawable-xxhdpi\drawer_shadow_dark.9.png" />
+    <AndroidResource Include="Resources\Drawable-xxhdpi\drawer_shadow_light.9.png" />
+    <AndroidResource Include="Resources\Drawable-xxhdpi\ic_drawer_about.png" />
+    <AndroidResource Include="Resources\Drawable-xxhdpi\ic_drawer_logout.png" />
+    <AndroidResource Include="Resources\Drawable-xxhdpi\ic_drawer_settings.png" />
+    <AndroidResource Include="Resources\Drawable-xxhdpi\ic_navigation_drawer.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IWantTo.Client.Core\IWantTo.Client.Core.Android.csproj">
@@ -103,13 +131,14 @@
     </XamarinComponentReference>
     <XamarinComponentReference Include="xamandroidsupportv4-18">
       <Visible>False</Visible>
-      <Version>19.1.0</Version>
+      <Version>20.0.0</Version>
     </XamarinComponentReference>
     <XamarinComponentReference Include="XamarinActionBarSherlock">
       <Visible>False</Visible>
       <Version>4.4.0.4</Version>
     </XamarinComponentReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
      Other similar extension points exist, see Microsoft.Common.targets.

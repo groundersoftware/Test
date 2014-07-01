@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace IWantTo.Client.Android.Screens.Base
+﻿namespace IWantTo.Client.Android.Screens.Base
 {
     /// <summary>
     /// Application Menu.
@@ -11,6 +6,8 @@ namespace IWantTo.Client.Android.Screens.Base
     public enum MenuItemEnum
     {
         None = 0x00000000,
+        Settings = 0x00000001,
+        About = 0x000000002,
         Exit = 0x10000000
     }
 }

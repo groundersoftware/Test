@@ -438,17 +438,17 @@ namespace IWantTo.Client.Android
 			// aapt resource value: 0x7f04000d
 			public const int abs__bright_foreground_holo_light = 2130968589;
 			
-			// aapt resource value: 0x7f040013
-			public const int abs__primary_text_disable_only_holo_dark = 2130968595;
-			
-			// aapt resource value: 0x7f040014
-			public const int abs__primary_text_disable_only_holo_light = 2130968596;
-			
 			// aapt resource value: 0x7f040015
-			public const int abs__primary_text_holo_dark = 2130968597;
+			public const int abs__primary_text_disable_only_holo_dark = 2130968597;
 			
 			// aapt resource value: 0x7f040016
-			public const int abs__primary_text_holo_light = 2130968598;
+			public const int abs__primary_text_disable_only_holo_light = 2130968598;
+			
+			// aapt resource value: 0x7f040017
+			public const int abs__primary_text_holo_dark = 2130968599;
+			
+			// aapt resource value: 0x7f040018
+			public const int abs__primary_text_holo_light = 2130968600;
 			
 			// aapt resource value: 0x7f040011
 			public const int actionbar_background = 2130968593;
@@ -489,11 +489,17 @@ namespace IWantTo.Client.Android
 			// aapt resource value: 0x7f040005
 			public const int common_signin_btn_light_text_pressed = 2130968581;
 			
-			// aapt resource value: 0x7f040017
-			public const int common_signin_btn_text_dark = 2130968599;
+			// aapt resource value: 0x7f040019
+			public const int common_signin_btn_text_dark = 2130968601;
 			
-			// aapt resource value: 0x7f040018
-			public const int common_signin_btn_text_light = 2130968600;
+			// aapt resource value: 0x7f04001a
+			public const int common_signin_btn_text_light = 2130968602;
+			
+			// aapt resource value: 0x7f040014
+			public const int drawer_background = 2130968596;
+			
+			// aapt resource value: 0x7f040013
+			public const int horizontal_separator_line = 2130968595;
 			
 			static Color()
 			{
@@ -975,19 +981,37 @@ namespace IWantTo.Client.Android
 			public const int common_signin_btn_text_pressed_light = 2130837639;
 			
 			// aapt resource value: 0x7f020088
-			public const int ic_plusone_medium_off_client = 2130837640;
+			public const int drawer_shadow_dark = 2130837640;
 			
 			// aapt resource value: 0x7f020089
-			public const int ic_plusone_small_off_client = 2130837641;
+			public const int drawer_shadow_light = 2130837641;
 			
 			// aapt resource value: 0x7f02008a
-			public const int ic_plusone_standard_off_client = 2130837642;
+			public const int ic_drawer_about = 2130837642;
 			
 			// aapt resource value: 0x7f02008b
-			public const int ic_plusone_tall_off_client = 2130837643;
+			public const int ic_drawer_logout = 2130837643;
 			
 			// aapt resource value: 0x7f02008c
-			public const int Icon = 2130837644;
+			public const int ic_drawer_settings = 2130837644;
+			
+			// aapt resource value: 0x7f02008d
+			public const int ic_navigation_drawer = 2130837645;
+			
+			// aapt resource value: 0x7f02008e
+			public const int ic_plusone_medium_off_client = 2130837646;
+			
+			// aapt resource value: 0x7f02008f
+			public const int ic_plusone_small_off_client = 2130837647;
+			
+			// aapt resource value: 0x7f020090
+			public const int ic_plusone_standard_off_client = 2130837648;
+			
+			// aapt resource value: 0x7f020091
+			public const int ic_plusone_tall_off_client = 2130837649;
+			
+			// aapt resource value: 0x7f020092
+			public const int Icon = 2130837650;
 			
 			static Drawable()
 			{
@@ -1001,6 +1025,15 @@ namespace IWantTo.Client.Android
 		
 		public partial class Id
 		{
+			
+			// aapt resource value: 0x7f050036
+			public const int DrawerListRow = 2131034166;
+			
+			// aapt resource value: 0x7f050037
+			public const int DrawerListRow_Icon = 2131034167;
+			
+			// aapt resource value: 0x7f050038
+			public const int DrawerListRow_Label = 2131034168;
 			
 			// aapt resource value: 0x7f050024
 			public const int abs__action_bar = 2131034148;
@@ -1122,6 +1155,9 @@ namespace IWantTo.Client.Android
 			// aapt resource value: 0x7f05000d
 			public const int disableHome = 2131034125;
 			
+			// aapt resource value: 0x7f050039
+			public const int drawer_layout = 2131034169;
+			
 			// aapt resource value: 0x7f05002a
 			public const int edit_query = 2131034154;
 			
@@ -1131,11 +1167,14 @@ namespace IWantTo.Client.Android
 			// aapt resource value: 0x7f050004
 			public const int hybrid = 2131034116;
 			
+			// aapt resource value: 0x7f05003b
+			public const int left_drawer = 2131034171;
+			
 			// aapt resource value: 0x7f050006
 			public const int listMode = 2131034118;
 			
-			// aapt resource value: 0x7f050036
-			public const int map = 2131034166;
+			// aapt resource value: 0x7f05003a
+			public const int map = 2131034170;
 			
 			// aapt resource value: 0x7f050000
 			public const int none = 2131034112;
@@ -1263,13 +1302,16 @@ namespace IWantTo.Client.Android
 			public const int abs__simple_dropdown_hint = 2130903060;
 			
 			// aapt resource value: 0x7f030015
-			public const int Main = 2130903061;
+			public const int DrawerListItem = 2130903061;
 			
 			// aapt resource value: 0x7f030016
-			public const int sherlock_spinner_dropdown_item = 2130903062;
+			public const int Main = 2130903062;
 			
 			// aapt resource value: 0x7f030017
-			public const int sherlock_spinner_item = 2130903063;
+			public const int sherlock_spinner_dropdown_item = 2130903063;
+			
+			// aapt resource value: 0x7f030018
+			public const int sherlock_spinner_item = 2130903064;
 			
 			static Layout()
 			{
@@ -1287,8 +1329,20 @@ namespace IWantTo.Client.Android
 			// aapt resource value: 0x7f060028
 			public const int ApplicationName = 2131099688;
 			
+			// aapt resource value: 0x7f06002d
+			public const int DrawerClose = 2131099693;
+			
+			// aapt resource value: 0x7f06002c
+			public const int DrawerOpen = 2131099692;
+			
 			// aapt resource value: 0x7f060029
-			public const int MenuExit = 2131099689;
+			public const int MenuAbout = 2131099689;
+			
+			// aapt resource value: 0x7f06002b
+			public const int MenuExit = 2131099691;
+			
+			// aapt resource value: 0x7f06002a
+			public const int MenuSettings = 2131099690;
 			
 			// aapt resource value: 0x7f06001b
 			public const int abs__action_bar_home_description = 2131099675;
