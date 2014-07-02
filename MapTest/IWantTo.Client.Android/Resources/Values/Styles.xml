@@ -5,7 +5,14 @@
         <item name="android:actionBarStyle">@style/Widget.NoTitle.ActionBar</item>
         <item name="android:windowBackground">@color/application_background</item>
         <item name="android:colorBackground">@color/application_background</item>
-    </style>    
+    </style>
+
+    <!--
+      Necessary theme for JobListActivity for providing Drawer Icon in Android version  2.3.X
+      -->
+    <style name="Theme.NoTitleDrawerIcon" parent="Theme.NoTitle">
+        <item name="homeAsUpIndicator">@drawable/ic_navigation_drawer</item>
+    </style>
 
     <style name="Widget.NoTitle.ActionBar" parent="Widget.Sherlock.ActionBar">
         <item name="android:background">@color/actionbar_background</item>

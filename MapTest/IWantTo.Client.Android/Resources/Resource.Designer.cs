@@ -1591,6 +1591,9 @@ namespace IWantTo.Client.Android
 			// aapt resource value: 0x7f0a0059
 			public const int Theme_NoTitle = 2131361881;
 			
+			// aapt resource value: 0x7f0a005a
+			public const int Theme_NoTitleDrawerIcon = 2131361882;
+			
 			// aapt resource value: 0x7f0a0054
 			public const int Theme_Sherlock = 2131361876;
 			
@@ -1609,14 +1612,14 @@ namespace IWantTo.Client.Android
 			// aapt resource value: 0x7f0a0000
 			public const int Widget = 2131361792;
 			
-			// aapt resource value: 0x7f0a005a
-			public const int Widget_NoTitle_ActionBar = 2131361882;
-			
 			// aapt resource value: 0x7f0a005b
-			public const int Widget_NoTitle_ActionBar_IndeterminateProgressBar = 2131361883;
+			public const int Widget_NoTitle_ActionBar = 2131361883;
 			
 			// aapt resource value: 0x7f0a005c
-			public const int Widget_NoTitle_ActionBar_TitleTextStyle = 2131361884;
+			public const int Widget_NoTitle_ActionBar_IndeterminateProgressBar = 2131361884;
+			
+			// aapt resource value: 0x7f0a005d
+			public const int Widget_NoTitle_ActionBar_TitleTextStyle = 2131361885;
 			
 			// aapt resource value: 0x7f0a0002
 			public const int Widget_Sherlock_ActionBar = 2131361794;
