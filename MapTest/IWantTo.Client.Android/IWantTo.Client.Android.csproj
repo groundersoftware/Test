@@ -46,8 +46,9 @@
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ActionBarSherlock">
-      <HintPath>..\Components\XamarinActionBarSherlock-4.4.0.4\lib\android\ActionBarSherlock.dll</HintPath>
+    <Reference Include="ActionBarSherlock, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\XamarinActionBarSherlock-4.4.0.5\lib\android\ActionBarSherlock.dll</HintPath>
     </Reference>
     <Reference Include="GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -59,8 +60,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
-    <Reference Include="Xamarin.Android.Support.v4">
-      <HintPath>..\Components\XamarinActionBarSherlock-4.4.0.4\lib\android\Xamarin.Android.Support.v4.dll</HintPath>
+    <Reference Include="Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\XamarinActionBarSherlock-4.4.0.5\lib\android\Xamarin.Android.Support.v4.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -135,7 +137,7 @@
     </XamarinComponentReference>
     <XamarinComponentReference Include="XamarinActionBarSherlock">
       <Visible>False</Visible>
-      <Version>4.4.0.4</Version>
+      <Version>4.4.0.5</Version>
     </XamarinComponentReference>
   </ItemGroup>
   <ItemGroup />
