@@ -13,4 +13,29 @@
   <string name="DrawerOpen">Open</string>
   <string name="DrawerClose">Close</string>
 
+  <!-- Preferences -->
+  <string name="PreferencesLayout.Title">Settings</string>
+  <string name="PreferencesLayout.GeneralCategory.Title">General Settings</string>
+  <string name="PreferencesLayout.GeneralCategory.LanguagePreference.Title">Language</string>
+  <string name="PreferencesLayout.GeneralCategory.SendReport.Title">Report problem</string>
+  <string name="PreferencesLayout.GeneralCategory.SendReport.Summary">Let us know about a broken feature.</string>
+  <string name="PreferencesLayout.NotificationsCategory.Title">Notification settings</string>
+  <string name="PreferencesLayout.NotificationsCategory.Vibrate.Title">Vibrate</string>
+  <string name="PreferencesLayout.NotificationsCategory.Vibrate.Active">On</string>
+  <string name="PreferencesLayout.NotificationsCategory.Vibrate.Inactive">Off</string>
+  <string name="PreferencesLayout.NotificationsCategory.Sound.Title">Ringtone</string>
+  <string name="PreferencesLayout.NotificationsCategory.Sound.Active">On</string>
+  <string name="PreferencesLayout.NotificationsCategory.Sound.Inactive">Off</string>
+  <string name="PreferencesLayout.LanguagesDialog.Title">Select language</string>
+  <string name="PreferencesLayout.PreferenceChange.Information">You need to restart application for the changes to take effect</string>
+
+  <!-- Languages -->
+  <string-array name="PreferencesLayout_Languages_List">
+    <item>English</item>
+  </string-array>
+
+  <string-array name="PreferencesLayout_Languages_List_Values">
+    <item>en</item>
+  </string-array>
+
 </resources>

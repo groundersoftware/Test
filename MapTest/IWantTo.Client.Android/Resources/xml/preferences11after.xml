@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2008 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- This is a primitive example showing the different types of preferences available. -->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <!-- General Category -->
+  <PreferenceCategory android:title="@string/PreferencesLayout.GeneralCategory.Title">
+
+    <ListPreference
+      android:key="languages_list_preference"
+      android:title="@string/PreferencesLayout.GeneralCategory.LanguagePreference.Title"
+      android:entries="@array/PreferencesLayout_Languages_List"
+      android:entryValues="@array/PreferencesLayout_Languages_List_Values"
+      android:dialogTitle="@string/PreferencesLayout.LanguagesDialog.Title" />
+
+    <PreferenceScreen
+      android:key="report_problem_preference"
+      android:title="@string/PreferencesLayout.GeneralCategory.SendReport.Title"
+      android:summary="@string/PreferencesLayout.GeneralCategory.SendReport.Summary"/>
+
+  </PreferenceCategory>
+
+  <!-- Notification Category -->
+  <PreferenceCategory android:title="@string/PreferencesLayout.NotificationsCategory.Title">
+
+    <SwitchPreference
+      android:key="notification_vibration_preference"
+      android:title="@string/PreferencesLayout.NotificationsCategory.Vibrate.Title" />
+
+    <SwitchPreference
+      android:key="notification_sound_preference"
+      android:title="@string/PreferencesLayout.NotificationsCategory.Sound.Title"/>
+
+  </PreferenceCategory>
+
+</PreferenceScreen>

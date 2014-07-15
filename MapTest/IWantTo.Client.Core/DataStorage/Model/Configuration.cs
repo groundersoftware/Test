@@ -22,6 +22,9 @@ namespace IWantTo.Client.Core.DataStorage.Model
             DatabaseVersion = databaseVersion;
 
             // default values
+            Language = "en";
+            NotificationSound = true;
+            NotificationVibrating = true;
         }
 
         #endregion Constructors
@@ -31,6 +34,18 @@ namespace IWantTo.Client.Core.DataStorage.Model
         /// <summary>Actual version of database model.</summary>
         [NotNull]
         public int DatabaseVersion { get; set; }
+
+        /// <summary>Language.</summary>
+        [NotNull]
+        public string Language { get; set; }
+
+        /// <summary>True if notification sounds is enabled, otherwise false.</summary>      
+        [NotNull]
+        public bool NotificationSound { get; set; }
+
+        /// <summary>True if notification vibrating is enabled, otherwise false.</summary>        
+        [NotNull]
+        public bool NotificationVibrating { get; set; }
 
         #endregion Properties
 
@@ -97,7 +112,7 @@ namespace IWantTo.Client.Core.DataStorage.Model
 
         public override string ToString()
         {
-            return string.Format("Configuration[Id={0},DatabaseVersion={1}]", Id, DatabaseVersion);
+            return string.Format("Configuration[Id={0},DatabaseVersion={1},Language='{2}',NotificationSound='{3}',NotificationVibrating='{4}']", Id, DatabaseVersion, Language, NotificationSound, NotificationVibrating);
         }
 
         #endregion Methods

@@ -76,6 +76,7 @@
     <Compile Include="Screens\Drawer\DrawerListAdapter.cs" />
     <Compile Include="Screens\Drawer\MyActionBarDrawerToggle.cs" />
     <Compile Include="Screens\Main\MainActivity.cs" />
+    <Compile Include="Screens\Preferences\PreferencesActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -119,6 +120,8 @@
     <AndroidResource Include="Resources\Drawable-xxhdpi\ic_drawer_logout.png" />
     <AndroidResource Include="Resources\Drawable-xxhdpi\ic_drawer_settings.png" />
     <AndroidResource Include="Resources\Drawable-xxhdpi\ic_navigation_drawer.png" />
+    <AndroidResource Include="Resources\xml\preferences11after.xml" />
+    <AndroidResource Include="Resources\xml\preferences11pre.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IWantTo.Client.Core\IWantTo.Client.Core.Android.csproj">

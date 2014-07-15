@@ -21,6 +21,27 @@ namespace IWantTo.Client.Core.Services
             set { UpdateConfigurationValue("DatabaseVersion", value); }
         }
 
+        /// <summary>Language.</summary>
+        public string Language
+        {
+            get { return ReadConfigurationValue<string>("Language"); }
+            set { UpdateConfigurationValue("Language", value); }
+        }
+
+        /// <summary>True if notification sounds is enabled, otherwise false.</summary>        
+        public bool NotificationSound
+        {
+            get { return ReadConfigurationValue<bool>("NotificationSound"); }
+            set { UpdateConfigurationValue("NotificationSound", value); }
+        }
+
+        /// <summary>True if notification vibrating is enabled, otherwise false.</summary>        
+        public bool NotificationVibrating
+        {
+            get { return ReadConfigurationValue<bool>("NotificationVibrating"); }
+            set { UpdateConfigurationValue("NotificationVibrating", value); }
+        }
+
         /// <summary>
         /// Returns Configuration instance. It is singleton.
         /// </summary>

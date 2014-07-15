@@ -1,6 +1,7 @@
 using Android.App;
 using Android.Content;
 using Android.OS;
+using IWantTo.Client.Android.Screens.Preferences;
 using IWantTo.Client.Core.Utils;
 
 using Xamarin.ActionbarSherlockBinding.App;
@@ -60,6 +61,8 @@ namespace IWantTo.Client.Android.Screens.Base
             {
                 case MenuItemEnum.Settings:
                 {
+                    var intent = new Intent(this, typeof(PreferencesActivity));
+                    StartActivity(intent);
                     return true;
                 }
                 case MenuItemEnum.About:
