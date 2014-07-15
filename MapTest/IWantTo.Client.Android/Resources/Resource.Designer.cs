@@ -1003,34 +1003,31 @@ namespace IWantTo.Client.Android
 			public const int drawer_shadow_dark = 2130837640;
 			
 			// aapt resource value: 0x7f020089
-			public const int drawer_shadow_light = 2130837641;
+			public const int ic_drawer_about = 2130837641;
 			
 			// aapt resource value: 0x7f02008a
-			public const int ic_drawer_about = 2130837642;
+			public const int ic_drawer_logout = 2130837642;
 			
 			// aapt resource value: 0x7f02008b
-			public const int ic_drawer_logout = 2130837643;
+			public const int ic_drawer_settings = 2130837643;
 			
 			// aapt resource value: 0x7f02008c
-			public const int ic_drawer_settings = 2130837644;
+			public const int ic_navigation_drawer = 2130837644;
 			
 			// aapt resource value: 0x7f02008d
-			public const int ic_navigation_drawer = 2130837645;
+			public const int ic_plusone_medium_off_client = 2130837645;
 			
 			// aapt resource value: 0x7f02008e
-			public const int ic_plusone_medium_off_client = 2130837646;
+			public const int ic_plusone_small_off_client = 2130837646;
 			
 			// aapt resource value: 0x7f02008f
-			public const int ic_plusone_small_off_client = 2130837647;
+			public const int ic_plusone_standard_off_client = 2130837647;
 			
 			// aapt resource value: 0x7f020090
-			public const int ic_plusone_standard_off_client = 2130837648;
+			public const int ic_plusone_tall_off_client = 2130837648;
 			
 			// aapt resource value: 0x7f020091
-			public const int ic_plusone_tall_off_client = 2130837649;
-			
-			// aapt resource value: 0x7f020092
-			public const int Icon = 2130837650;
+			public const int Icon = 2130837649;
 			
 			static Drawable()
 			{
@@ -1677,10 +1674,7 @@ namespace IWantTo.Client.Android
 			public const int Widget_NoTitle_ActionBar = 2131427419;
 			
 			// aapt resource value: 0x7f0b005c
-			public const int Widget_NoTitle_ActionBar_IndeterminateProgressBar = 2131427420;
-			
-			// aapt resource value: 0x7f0b005d
-			public const int Widget_NoTitle_ActionBar_TitleTextStyle = 2131427421;
+			public const int Widget_NoTitle_ActionBar_TitleTextStyle = 2131427420;
 			
 			// aapt resource value: 0x7f0b0002
 			public const int Widget_Sherlock_ActionBar = 2131427330;
