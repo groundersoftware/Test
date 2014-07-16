@@ -18,7 +18,14 @@
 	<uses-permission android:name="android.permission.READ_GSERVICES" />
 	<uses-permission android:name="android.permission.MAPS_RECEIVE" />
 	<permission android:name="com.groundersoftware.maptest.permission.MAPS_RECEIVE" android:protectionLevel="signature" />
-	<application android:icon="@drawable/Icon" android:label="@string/ApplicationName" android:debuggable="true" android:theme="@style/Theme.NoTitle">>
+
+  <service android:name="JobDispatch.JobDispatchService">
+    <intent-filter>
+      <action android:name="com.groundersoftware.backgroundservice" />
+    </intent-filter>
+  </service>
+
+  <application android:icon="@drawable/Icon" android:label="@string/ApplicationName" android:debuggable="true" android:theme="@style/Theme.NoTitle">>
     <activity android:name="iwantto.activity.mainactivity" android:theme="@style/Theme.NoTitleDrawerIcon">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />

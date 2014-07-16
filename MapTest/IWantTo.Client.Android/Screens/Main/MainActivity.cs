@@ -1,4 +1,5 @@
 ﻿using Android.App;
+using Android.Content;
 using Android.Gms.Maps;
 using Android.OS;
 using Android.Support.V4.Widget;
@@ -15,9 +16,6 @@ namespace IWantTo.Client.Android.Screens.Main
     [Activity(Name = "iwantto.activity.mainactivity", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : BaseActivity
     {
-        /// <summary>Location service.</summary>
-        private LocationService _locationService;
-
         /// <summary>Map fragment</summary>
         private MapFragment _mapFragment;
 
@@ -60,8 +58,7 @@ namespace IWantTo.Client.Android.Screens.Main
 
             var dbVersion = ConfigurationService.Instance.DatabaseVersion;
 
-            // creates location service
-            _locationService = new LocationService(this);
+            StartService(new Intent(this, typeof(BackgroundService)));
         }
 
         /// <inheritdoc />
@@ -73,7 +70,6 @@ namespace IWantTo.Client.Android.Screens.Main
 
         protected override void OnResume()
         {
-
             var mapFrag = (MapFragment)FragmentManager.FindFragmentById(Resource.Id.map);
             var map = mapFrag.Map;
             if (map != null)
@@ -82,21 +78,18 @@ namespace IWantTo.Client.Android.Screens.Main
                 System.Console.WriteLine("Mam mapu!!!");
             }
 
-            // enable position tracking if activity is visible
-            _locationService.EnablePositionTracking(true);
             base.OnResume();
         }
 
         protected override void OnPause()
         {
-            // disable position tracking if activity is not visible
-            _locationService.EnablePositionTracking(false);
             base.OnPause();
         }
 
         protected override void OnDestroy()
         {
-            _locationService.EnablePositionTracking(false);
+            StopService(new Intent(this, typeof(BackgroundService)));
+
             base.OnDestroy();
         }
 

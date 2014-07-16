@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Base\AppConstants.cs" />
     <Compile Include="Base\BaseActivity.cs" />
     <Compile Include="Base\MenuItemEntry.cs" />
     <Compile Include="Base\MenuItemEnum.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="Screens\About\AboutActivity.cs" />
     <Compile Include="Screens\Main\MainActivity.cs" />
     <Compile Include="Screens\Preferences\PreferencesActivity.cs" />
+    <Compile Include="Services\BackgroundService.cs" />
     <Compile Include="Services\LocationService.cs" />
   </ItemGroup>
   <ItemGroup>

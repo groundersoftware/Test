@@ -2,6 +2,7 @@
 using Android.Content;
 using Android.Locations;
 using Android.OS;
+using IWantTo.Client.Android.Base;
 using IWantTo.Client.Core.Utils;
 
 namespace IWantTo.Client.Android.Services

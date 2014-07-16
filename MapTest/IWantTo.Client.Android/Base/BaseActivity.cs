@@ -18,6 +18,10 @@ namespace IWantTo.Client.Android.Base
         /// <summary>Mask for Menu items in Options.</summary>
         protected uint MenuItemsMask { get; set; }
 
+        /// <summary>Broadcast receiver for each activity.</summary>
+        private Receiver _broadcastReceiver;
+        private bool _isReceiverRegistered;
+
         /// <summary>Menu.</summary>
         private static readonly MenuItemEntry[] MENU_ENTRIES =
         {
@@ -37,6 +41,8 @@ namespace IWantTo.Client.Android.Base
             _log.InfoFormat("Creating '{0}' Activity.", LocalClassName);
             base.OnCreate(bundle);
 
+            // start broadcast receiver in start, don't move it from here
+            _broadcastReceiver = new Receiver(this);
         }
 
         protected override void OnStart()
@@ -51,6 +57,12 @@ namespace IWantTo.Client.Android.Base
             _log.InfoFormat("Resuming '{0}' Activity", LocalClassName);
             base.OnResume();
 
+            // register broadcast receiver
+            if (!_isReceiverRegistered)
+            {
+                RegisterReceiver(_broadcastReceiver, new IntentFilter(AppConstants.Broadcast));
+                _isReceiverRegistered = true;
+            }
         }
 
         protected override void OnPause()
@@ -58,6 +70,12 @@ namespace IWantTo.Client.Android.Base
             _log.InfoFormat("Pausing '{0}' Activity", LocalClassName);
             base.OnPause();
 
+            // register broadcast receiver
+            if (_isReceiverRegistered)
+            {
+                UnregisterReceiver(_broadcastReceiver);
+                _isReceiverRegistered = false;
+            }
         }
 
         /// <summary>
@@ -126,7 +144,6 @@ namespace IWantTo.Client.Android.Base
             }
         }
 
-
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
             var order = 0;
@@ -148,6 +165,53 @@ namespace IWantTo.Client.Android.Base
             returnIntent.PutExtra("OnExit", true);
             SetResult(Result.Ok, returnIntent);
             Finish();
+        }
+
+        /// <summary>
+        /// Receive new GPS location.
+        /// </summary>
+        /// <param name="latitude">Latitude</param>
+        /// <param name="longitude">Longitude</param>
+        protected virtual void OnLocationUpdate(double latitude, double longitude)
+        {
+            // override in base class if you need
+        }
+
+        /// <summary>
+        /// Receiver for all notifications.
+        /// </summary>
+        [BroadcastReceiver]
+        private sealed class Receiver : BroadcastReceiver
+        {
+            private readonly BaseActivity _activity;
+
+            public Receiver()
+            {
+
+            }
+
+            public Receiver(BaseActivity activity)
+            {
+                _activity = activity;
+            }
+
+            public override void OnReceive(Context context, Intent intent)
+            {
+                if (_activity != null)
+                {
+                    if (intent.Extras != null)
+                    {
+                        if (intent.Extras.ContainsKey(AppConstants.LocationUpdateLatitude))
+                        {
+                            var latitude = intent.GetDoubleExtra(AppConstants.LocationUpdateLatitude, 0);
+                            var longitude = intent.GetDoubleExtra(AppConstants.LocationUpdateLongitude, 0);
+
+                            // inform also about User Authorization after successful connection
+                            _activity.OnLocationUpdate(latitude, longitude);
+                        }
+                    }
+                }
+            }
         }
     }
 }
