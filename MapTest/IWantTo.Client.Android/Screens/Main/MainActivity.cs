@@ -20,6 +20,9 @@ namespace IWantTo.Client.Android.Screens.Main
         /// <summary>Map fragment</summary>
         private MapFragment _mapFragment;
 
+        /// <summary>Marker on Map.</summary>
+        private Marker _marker;
+
         /// <summary>Menu drawer</summary>
         private DrawerLayout _drawerLayout;
         private ListView _drawerList;
@@ -96,6 +99,15 @@ namespace IWantTo.Client.Android.Screens.Main
             if (map != null)
             {
                 var position = new LatLng(latitude, longitude);
+
+                // creates marker if doesn't exist
+                if (_marker == null)
+                {
+                    var markerOption = new MarkerOptions().SetPosition(position).SetTitle("You");
+                    _marker = map.AddMarker(markerOption);
+                }
+
+                _marker.Position = position;
 
                 var cameraUpdate = CameraUpdateFactory.NewLatLng(position);
                 map.AnimateCamera(cameraUpdate);
