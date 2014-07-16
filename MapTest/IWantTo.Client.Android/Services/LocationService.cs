@@ -50,8 +50,12 @@ namespace IWantTo.Client.Android.Services
             _log.Info("Location Service successfully created.");
         }
 
-        /// <inheritdoc />
-        public bool PositionTracking(bool enable)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="enable"></param>
+        /// <returns></returns>
+        public bool EnablePositionTracking(bool enable)
         {
             // sanity check if location manager exist
             if (_locationManager == null)
@@ -99,27 +103,6 @@ namespace IWantTo.Client.Android.Services
             }
 
             return true;
-        }
-
-        /// <inheritdoc />
-        public void DisposeLocationService()
-        {
-            try
-            {
-                _log.InfoFormat("Disabling position tracking...");
-
-                // removed updates if exist
-                if (_locationManager != null)
-                {
-                    _locationManager.RemoveUpdates(this);
-                }
-
-                _log.Info("Location service stopped.");
-            }
-            catch (Exception ex)
-            {
-                _log.ErrorFormat("Exception during stopping location service: {0}", ex.ToString());
-            }
         }
 
         /// <inheritdoc />

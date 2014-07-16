@@ -34,9 +34,52 @@ namespace IWantTo.Client.Android.Base
 
         protected override void OnCreate(Bundle bundle)
         {
+            _log.InfoFormat("Creating '{0}' Activity.", LocalClassName);
             base.OnCreate(bundle);
 
-            // Create your application here
+        }
+
+        protected override void OnStart()
+        {
+            _log.InfoFormat("Starting '{0}' Activity", LocalClassName);
+            base.OnStart();
+
+        }
+
+        protected override void OnResume()
+        {
+            _log.InfoFormat("Resuming '{0}' Activity", LocalClassName);
+            base.OnResume();
+
+        }
+
+        protected override void OnPause()
+        {
+            _log.InfoFormat("Pausing '{0}' Activity", LocalClassName);
+            base.OnPause();
+
+        }
+
+        /// <summary>
+        /// Stops Flurry session.
+        /// Note: if method is overridden in activity don't forgot call this base method.
+        /// </summary>
+        protected override void OnStop()
+        {
+            _log.InfoFormat("Stopping '{0}' Activity", LocalClassName);
+            base.OnStop();
+
+        }
+
+        /// <summary>
+        /// Also UnBound Activity from Job Dispatch Service and removing created handlers.
+        /// Note: if method is overrided in activity don't forgot call this base method.
+        /// </summary>
+        protected override void OnDestroy()
+        {
+            _log.InfoFormat("Destroying '{0}' Activity", LocalClassName);
+            base.OnDestroy();
+
         }
 
         public override bool OnOptionsItemSelected(IMenuItem item)

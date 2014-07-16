@@ -6,6 +6,7 @@ using Android.Views;
 using Android.Widget;
 using IWantTo.Client.Android.Base;
 using IWantTo.Client.Android.Drawer;
+using IWantTo.Client.Android.Services;
 using IWantTo.Client.Core.Services;
 using IMenuItem = Xamarin.ActionbarSherlockBinding.Views.IMenuItem;
 
@@ -14,6 +15,9 @@ namespace IWantTo.Client.Android.Screens.Main
     [Activity(Name = "iwantto.activity.mainactivity", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : BaseActivity
     {
+        /// <summary>Location service.</summary>
+        private LocationService _locationService;
+
         /// <summary>Map fragment</summary>
         private MapFragment _mapFragment;
 
@@ -55,6 +59,9 @@ namespace IWantTo.Client.Android.Screens.Main
             SupportActionBar.SetDisplayShowTitleEnabled(false);
 
             var dbVersion = ConfigurationService.Instance.DatabaseVersion;
+
+            // creates location service
+            _locationService = new LocationService(this);
         }
 
         /// <inheritdoc />
@@ -75,8 +82,22 @@ namespace IWantTo.Client.Android.Screens.Main
                 System.Console.WriteLine("Mam mapu!!!");
             }
 
-
+            // enable position tracking if activity is visible
+            _locationService.EnablePositionTracking(true);
             base.OnResume();
+        }
+
+        protected override void OnPause()
+        {
+            // disable position tracking if activity is not visible
+            _locationService.EnablePositionTracking(false);
+            base.OnPause();
+        }
+
+        protected override void OnDestroy()
+        {
+            _locationService.EnablePositionTracking(false);
+            base.OnDestroy();
         }
 
         /// <summary>
