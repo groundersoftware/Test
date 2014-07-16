@@ -1,6 +1,7 @@
 ﻿using Android.App;
 using Android.Content;
 using Android.Gms.Maps;
+using Android.Gms.Maps.Model;
 using Android.OS;
 using Android.Support.V4.Widget;
 using Android.Views;
@@ -70,14 +71,6 @@ namespace IWantTo.Client.Android.Screens.Main
 
         protected override void OnResume()
         {
-            var mapFrag = (MapFragment)FragmentManager.FindFragmentById(Resource.Id.map);
-            var map = mapFrag.Map;
-            if (map != null)
-            {
-                // The GoogleMap object is ready to go.
-                System.Console.WriteLine("Mam mapu!!!");
-            }
-
             base.OnResume();
         }
 
@@ -88,9 +81,25 @@ namespace IWantTo.Client.Android.Screens.Main
 
         protected override void OnDestroy()
         {
-            StopService(new Intent(this, typeof(BackgroundService)));
 
             base.OnDestroy();
+        }
+
+        /// <summary>
+        /// Receive new GPS location.
+        /// </summary>
+        /// <param name="latitude">Latitude</param>
+        /// <param name="longitude">Longitude</param>
+        protected override void OnLocationUpdate(double latitude, double longitude)
+        {
+            var map = _mapFragment.Map;
+            if (map != null)
+            {
+                var position = new LatLng(latitude, longitude);
+
+                var cameraUpdate = CameraUpdateFactory.NewLatLng(position);
+                map.AnimateCamera(cameraUpdate);
+            }
         }
 
         /// <summary>

@@ -2,7 +2,6 @@
 using Android.Content;
 using Android.Locations;
 using Android.OS;
-using IWantTo.Client.Android.Base;
 using IWantTo.Client.Core.Utils;
 
 namespace IWantTo.Client.Android.Services
@@ -11,6 +10,12 @@ namespace IWantTo.Client.Android.Services
     {
         /// <summary>Logger.</summary>
         private static readonly Logger _log = Logger.Create(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
+        /// <summary>Location change delegate.</summary>
+        public delegate void OnLocationChangeHandler(Location location);
+
+        /// <summary>Location change event.</summary>
+        public event OnLocationChangeHandler OnLocationChange;
 
         /// <summary>Unix Start Date.</summary>
         private static readonly DateTime _unixStartDate = new DateTime(1970, 1, 1);
@@ -132,6 +137,11 @@ namespace IWantTo.Client.Android.Services
 
                 // process position here
 
+                // notify registered listeners
+                if (OnLocationChange != null)
+                {
+                    OnLocationChange(location);
+                }
             }
             else
             {

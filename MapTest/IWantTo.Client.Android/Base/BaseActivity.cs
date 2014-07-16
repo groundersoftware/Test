@@ -3,6 +3,7 @@ using Android.Content;
 using Android.OS;
 using IWantTo.Client.Android.Screens.About;
 using IWantTo.Client.Android.Screens.Preferences;
+using IWantTo.Client.Android.Services;
 using IWantTo.Client.Core.Utils;
 using Xamarin.ActionbarSherlockBinding.App;
 using Xamarin.ActionbarSherlockBinding.Views;
@@ -161,6 +162,8 @@ namespace IWantTo.Client.Android.Base
 
         protected virtual void MenuExit()
         {
+            StopService(new Intent(this, typeof(BackgroundService)));
+
             var returnIntent = new Intent();
             returnIntent.PutExtra("OnExit", true);
             SetResult(Result.Ok, returnIntent);

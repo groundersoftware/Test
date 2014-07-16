@@ -1,7 +1,9 @@
 using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
+using Android.Locations;
 using Android.OS;
+using IWantTo.Client.Android.Base;
 using IWantTo.Client.Core.Utils;
 using Java.Lang;
 
@@ -35,6 +37,8 @@ namespace IWantTo.Client.Android.Services
 
             // creates location service
             _locationService = new LocationService(this);
+            _locationService.EnablePositionTracking(true);
+            _locationService.OnLocationChange += OnLocationChange;
 
             // start main background thread
             Task.Factory.StartNew(BackgroundServiceThread, TaskCreationOptions.LongRunning);
@@ -57,6 +61,19 @@ namespace IWantTo.Client.Android.Services
             _log.Info("The background service thread finished.");
         }
 
+        /// <summary>
+        /// Receives Location Updates from Location Service.
+        /// </summary>
+        /// <param name="location"></param>
+        private void OnLocationChange(Location location)
+        {
+            // notify activities about a new location change
+            var intent = new Intent(AppConstants.Broadcast);
+            intent.PutExtra(AppConstants.LocationUpdateLatitude, location.Latitude);
+            intent.PutExtra(AppConstants.LocationUpdateLongitude, location.Longitude);
+            SendBroadcast(intent);
+        }
+
         public override IBinder OnBind(Intent intent)
         {
             _binder = new WantToServiceBinder(this);
@@ -69,6 +86,8 @@ namespace IWantTo.Client.Android.Services
         public override void OnDestroy()
         {
             _log.Info("Background Service Destroying.");
+
+            _locationService.OnLocationChange -= OnLocationChange;
             _locationService.EnablePositionTracking(false);
 
             base.OnDestroy();
