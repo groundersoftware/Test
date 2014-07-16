@@ -1,10 +1,10 @@
 using Android.App;
 using Android.Views;
 using Android.Widget;
-using IWantTo.Client.Android.Screens.Base;
-using Object = Java.Lang.Object;
+using IWantTo.Client.Android.Base;
+using Java.Lang;
 
-namespace IWantTo.Client.Android.Screens.Drawer
+namespace IWantTo.Client.Android.Drawer
 {
     public class DrawerListAdapter : BaseAdapter
     {

@@ -1,4 +1,4 @@
-namespace IWantTo.Client.Android.Screens.Base
+namespace IWantTo.Client.Android.Base
 {
     public class MenuItemEntry
     {

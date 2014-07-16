@@ -2,7 +2,6 @@
 using Android.Content;
 using Android.Locations;
 using Android.OS;
-using IWantTo.Client.Core.Services;
 using IWantTo.Client.Core.Utils;
 
 namespace IWantTo.Client.Android.Services
@@ -126,10 +125,8 @@ namespace IWantTo.Client.Android.Services
         /// <inheritdoc />
         public void OnLocationChanged(Location location)
         {
-            var userId = ConfigurationService.Instance.LastLoginId;
-
-            _log.InfoFormat("New Location received: Provider:'{0}', Latitude:{1}, Longitude:{2}, Accuracy:{3}, Speed:{4}, Bearing:{5}, Provider:{6}, Date:{7} for User:{8}.", location.Provider, location.Latitude,
-                            location.Longitude, location.Accuracy, location.Speed, location.Bearing, location.Provider, _unixStartDate.AddMilliseconds(location.Time).ToString("yyyy-MM-dd HH:mm:ss.fff"), userId);
+            _log.InfoFormat("New Location received: Provider:'{0}', Latitude:{1}, Longitude:{2}, Accuracy:{3}, Speed:{4}, Bearing:{5}, Provider:{6}, Date:{7}.", location.Provider, location.Latitude,
+                            location.Longitude, location.Accuracy, location.Speed, location.Bearing, location.Provider, _unixStartDate.AddMilliseconds(location.Time).ToString("yyyy-MM-dd HH:mm:ss.fff"));
 
             // process new location if is better than previous one
             if (IsBetterLocation(location, _lastValidLocation))

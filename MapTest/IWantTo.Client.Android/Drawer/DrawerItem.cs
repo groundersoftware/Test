@@ -1,6 +1,6 @@
-using IWantTo.Client.Android.Screens.Base;
+using IWantTo.Client.Android.Base;
 
-namespace IWantTo.Client.Android.Screens.Drawer
+namespace IWantTo.Client.Android.Drawer
 {
     public class DrawerItem : Java.Lang.Object
     {

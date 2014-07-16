@@ -1,7 +1,7 @@
 using Android.App;
 using Android.OS;
 using Android.Widget;
-using IWantTo.Client.Android.Screens.Base;
+using IWantTo.Client.Android.Base;
 
 namespace IWantTo.Client.Android.Screens.About
 {

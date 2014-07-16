@@ -4,8 +4,8 @@ using Android.OS;
 using Android.Support.V4.Widget;
 using Android.Views;
 using Android.Widget;
-using IWantTo.Client.Android.Screens.Base;
-using IWantTo.Client.Android.Screens.Drawer;
+using IWantTo.Client.Android.Base;
+using IWantTo.Client.Android.Drawer;
 using IWantTo.Client.Core.Services;
 using IMenuItem = Xamarin.ActionbarSherlockBinding.Views.IMenuItem;
 

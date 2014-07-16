@@ -4,7 +4,7 @@ using Android.Support.V4.App;
 using Android.Support.V4.Widget;
 using Android.Views;
 
-namespace IWantTo.Client.Android.Screens.Drawer
+namespace IWantTo.Client.Android.Drawer
 {
      public class ActionBarDrawerEventArgs : EventArgs
     {

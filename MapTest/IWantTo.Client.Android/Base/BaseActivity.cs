@@ -4,11 +4,10 @@ using Android.OS;
 using IWantTo.Client.Android.Screens.About;
 using IWantTo.Client.Android.Screens.Preferences;
 using IWantTo.Client.Core.Utils;
-
 using Xamarin.ActionbarSherlockBinding.App;
 using Xamarin.ActionbarSherlockBinding.Views;
 
-namespace IWantTo.Client.Android.Screens.Base
+namespace IWantTo.Client.Android.Base
 {
     [Activity(Label = "BaseActivity")]
     public class BaseActivity : SherlockFragmentActivity
