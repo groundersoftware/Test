@@ -69,6 +69,7 @@
     <Compile Include="App.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screens\About\AboutActivity.cs" />
     <Compile Include="Screens\Base\BaseActivity.cs" />
     <Compile Include="Screens\Base\MenuItemEntry.cs" />
     <Compile Include="Screens\Base\MenuItemEnum.cs" />
@@ -82,6 +83,9 @@
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <AndroidResource Include="Resources\Layout\DrawerListItem.axml" />
+    <AndroidResource Include="Resources\Layout\AboutLayout.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Layout\Main.axml" />

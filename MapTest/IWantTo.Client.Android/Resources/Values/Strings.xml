@@ -4,6 +4,14 @@
   <!-- Application -->
   <string name="ApplicationName">I Want To</string>
 
+  <!-- About -->
+  <string name="AboutLayout.Title">About</string>
+  <string name="AboutLayout.Product">Product</string>
+  <string name="AboutLayout.Version">Version</string>
+  <string name="AboutLayout.VersionIdentifier">Identifier</string>
+  <string name="AboutLayout.VersionDate">Date</string>
+  <string name="AboutLayout.Copyright">Copyright</string>
+
   <!-- Menu -->
   <string name="MenuAbout">About</string>
   <string name="MenuSettings">Settings</string>

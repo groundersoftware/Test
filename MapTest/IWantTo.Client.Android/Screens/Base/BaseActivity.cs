@@ -1,6 +1,7 @@
 using Android.App;
 using Android.Content;
 using Android.OS;
+using IWantTo.Client.Android.Screens.About;
 using IWantTo.Client.Android.Screens.Preferences;
 using IWantTo.Client.Core.Utils;
 
@@ -59,14 +60,16 @@ namespace IWantTo.Client.Android.Screens.Base
         {
             switch (menuItem)
             {
+                case MenuItemEnum.About:
+                {
+                    var intent = new Intent(this, typeof(AboutActivity));
+                    StartActivity(intent);
+                    return true;
+                }
                 case MenuItemEnum.Settings:
                 {
                     var intent = new Intent(this, typeof(PreferencesActivity));
                     StartActivity(intent);
-                    return true;
-                }
-                case MenuItemEnum.About:
-                {
                     return true;
                 }
                 case MenuItemEnum.Exit:
