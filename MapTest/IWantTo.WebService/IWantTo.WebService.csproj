@@ -63,7 +63,7 @@
     <Compile Include="Configuration.cs">
       <DependentUpon>IWantTo.tt</DependentUpon>
     </Compile>
-    <Compile Include="IService1.cs" />
+    <Compile Include="IWantToService.cs" />
     <Compile Include="IWantTo.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

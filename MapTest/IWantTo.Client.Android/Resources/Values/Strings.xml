@@ -14,6 +14,7 @@
 
   <!-- Menu -->
   <string name="MenuAbout">About</string>
+  <string name="MenuChat">Chat</string>
   <string name="MenuSettings">Settings</string>
   <string name="MenuExit">Exit</string>
 
@@ -36,6 +37,11 @@
   <string name="PreferencesLayout.NotificationsCategory.Sound.Inactive">Off</string>
   <string name="PreferencesLayout.LanguagesDialog.Title">Select language</string>
   <string name="PreferencesLayout.PreferenceChange.Information">You need to restart application for the changes to take effect</string>
+
+  <!-- Messaging -->
+  <string name="MessagingLayout.Title">Chat</string>
+  <string name="MessagingLayout.WriteMessage.Hint">Write a message</string>
+  <string name="MessagingLayout.EmptyString.Text">Empty</string>
 
   <!-- Languages -->
   <string-array name="PreferencesLayout_Languages_List">

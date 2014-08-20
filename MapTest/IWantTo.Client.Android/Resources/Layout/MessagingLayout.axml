@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/MessagingLayout.Bottom_Write_Bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="@android:color/white">
+        <EditText
+            android:id="@+id/MessagingLayout.AddCommentMessage"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:singleLine="true"
+            android:hint="@string/MessagingLayout.WriteMessage.Hint"
+            android:inputType="textCapSentences|textMultiLine"
+            android:textSize="16sp"
+            android:maxLength="500" />
+        <ImageButton
+            android:id="@+id/MessagingLayout.AttachmentButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:src="@drawable/ic_action_attachment"
+            android:background="?android:selectableItemBackground"
+            android:onClick="OnAttachAttachment"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="2dp" />
+        <ImageButton
+            android:id="@+id/MessagingLayout.SendButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:src="@drawable/ic_action_send_now_dark"
+            android:background="?android:selectableItemBackground"
+            android:onClick="OnSend"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="2dp" />
+    </LinearLayout>
+    <ListView
+        android:id="@+id/MessagingLayout.MessageList"
+        android:layout_above="@id/MessagingLayout.Bottom_Write_Bar"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:divider="@null"
+        android:smoothScrollbar="false"
+        android:layout_height="0dp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_below="@+id/MessagingLayout.MessageList"
+        android:layout_height="1dp"
+        android:background="@color/horizontal_separator_line"
+        android:layout_gravity="fill_horizontal" />
+    <TextView
+        android:id="@+id/MessagingLayout.EmptyMessage"
+        android:layout_above="@id/MessagingLayout.Bottom_Write_Bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/MessagingLayout.EmptyString.Text" />
+</RelativeLayout>

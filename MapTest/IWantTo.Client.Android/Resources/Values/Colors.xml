@@ -7,6 +7,13 @@
   <color name="horizontal_separator_line">#CFD0D1</color>
   <color name="drawer_background">#E7E8E9</color>
 
-
+  <color name="messagelistrow_username_text">#9B9B9B</color>
+  <color name="messagelistrow_background">#E7E8E9</color>
+  <color name="messagelistrow_bubble_text_left">#000000</color>
+  <color name="messagelistrow_bubble_text_right">#FFFFFF</color>
+  <color name="messagelistrow_bubble_datetime_left">#C0C0C0</color>
+  <color name="messagelistrow_bubble_datetime_right">#BAD1F6</color>
+  <color name="messagelistrow_bubble_datetime_image">#EAEAEA</color>
+  <color name="messagelistrow_bubble_datetime_image_shadow">#808080</color>
 
 </resources>

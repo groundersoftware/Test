@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/MessagingListRow_MainLayout"
+    android:background="@color/messagelistrow_background"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/MessagingListRow_WholeMessageLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/MessagingListRow_UserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/messagelistrow_username_text"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:textSize="10sp" />
+        <LinearLayout
+            android:id="@+id/MessagingListRow_BubbleTextLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/MessagingListRow_MessageText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/MessagingListRow_MessageTimeStampText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/MessagingListRow_BubbleImageLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/MessagingListRow_MessageImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true" />
+        <TextView
+            android:id="@+id/MessagingListRow_MessageTimeStampImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:textColor="@color/messagelistrow_bubble_datetime_image"
+            android:shadowColor="#808080"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2" />
+    </RelativeLayout>
+</LinearLayout>

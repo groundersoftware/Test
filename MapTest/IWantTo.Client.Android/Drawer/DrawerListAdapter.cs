@@ -12,6 +12,7 @@ namespace IWantTo.Client.Android.Drawer
         private static readonly DrawerItem[] DRAWER_ENTRIES =
         {
             new DrawerItem(MenuItemEnum.Settings, Resource.String.MenuSettings, Resource.Drawable.ic_drawer_settings),
+            new DrawerItem(MenuItemEnum.Chat, Resource.String.MenuChat, Resource.Drawable.ic_drawer_about),
             new DrawerItem(MenuItemEnum.About, Resource.String.MenuAbout, Resource.Drawable.ic_drawer_about),
             new DrawerItem(MenuItemEnum.Exit, Resource.String.MenuExit, Resource.Drawable.ic_drawer_logout)
         };

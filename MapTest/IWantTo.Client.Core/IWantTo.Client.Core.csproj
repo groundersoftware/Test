@@ -46,7 +46,9 @@
     <Compile Include="DataStorage\Contract\BusinessEntityBase.cs" />
     <Compile Include="DataStorage\Contract\IBusinessEntity.cs" />
     <Compile Include="DataStorage\IWantToDatabase.cs" />
+    <Compile Include="DataStorage\Model\ChatMessage.cs" />
     <Compile Include="DataStorage\Model\Configuration.cs" />
+    <Compile Include="DataStorage\Model\FileLruCache.cs" />
     <Compile Include="DataStorage\SQLite.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\BaseDatabaseService.cs" />

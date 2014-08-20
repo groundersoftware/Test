@@ -14,7 +14,6 @@ namespace IWantTo.Client.Core.DataStorage
     /// JobDispatchDatabase builds on SQLite.Net and represents a specific database, in our case,
     /// the Job Dispatch DB. It contains methods for retrieval and persistence as well as db
     /// creation, all based on the underlying ORM.
-    /// 
     /// </summary>
     public class IWantToDatabase : SQLiteConnection
     {
@@ -204,6 +203,8 @@ namespace IWantTo.Client.Core.DataStorage
         private static void CreateTables()
         {
             _db.CreateTable<Configuration>();
+            _db.CreateTable<FileLruCache>();
+            _db.CreateTable<ChatMessage>();
         }
 
         private static void DropTables()
@@ -257,6 +258,46 @@ namespace IWantTo.Client.Core.DataStorage
         }
 
         #endregion Configuration
+
+        #region FileLruCache
+
+        public static long InsertFileLruCache(FileLruCache fileLruCache)
+        {
+            return InsertItem(fileLruCache);
+        }
+
+        public static FileLruCache GetFileLruCache(string key)
+        {
+            lock (_locker)
+            {
+                return _db.Find<FileLruCache>(f => f.Key == key);
+            }
+        }
+
+        public static void DeleteFileLruCache(long jobId)
+        {
+            lock (_locker)
+            {
+                _db.Execute("delete from FileLruCache where JobId = ?1", jobId);
+            }
+        }
+
+        public static void DeleteFileLruCache(DateTime timestamp)
+        {
+            lock (_locker)
+            {
+                // load all older records than provided timestamp
+                var files = GetItems<FileLruCache>(f => f.Timestamp < timestamp);
+
+                // delete all
+                foreach (var file in files)
+                {
+                    DeleteItem<FileLruCache>(file.Id);
+                }
+            }
+        }
+
+        #endregion
 
         #region Log
 

@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="CoreConstants.cs" />
     <Compile Include="DataStorage\Contract\BusinessEntityBase.cs" />
+    <Compile Include="DataStorage\Model\ChatMessage.cs" />
+    <Compile Include="DataStorage\Model\FileLruCache.cs" />
     <Compile Include="DataStorage\Contract\IBusinessEntity.cs" />
     <Compile Include="DataStorage\IWantToDatabase.cs" />
     <Compile Include="DataStorage\Model\Configuration.cs" />

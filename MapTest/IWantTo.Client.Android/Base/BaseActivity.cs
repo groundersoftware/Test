@@ -2,6 +2,7 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using IWantTo.Client.Android.Screens.About;
+using IWantTo.Client.Android.Screens.Messaging;
 using IWantTo.Client.Android.Screens.Preferences;
 using IWantTo.Client.Android.Services;
 using IWantTo.Client.Core.Utils;
@@ -130,6 +131,12 @@ namespace IWantTo.Client.Android.Base
                 case MenuItemEnum.Settings:
                 {
                     var intent = new Intent(this, typeof(PreferencesActivity));
+                    StartActivity(intent);
+                    return true;
+                }
+                case MenuItemEnum.Chat:
+                {
+                    var intent = new Intent(this, typeof(MessagingActivity));
                     StartActivity(intent);
                     return true;
                 }

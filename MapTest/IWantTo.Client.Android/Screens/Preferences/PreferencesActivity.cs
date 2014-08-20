@@ -15,7 +15,7 @@ namespace IWantTo.Client.Android.Screens.Preferences
     [Activity(Name = "iwantto.activity.preferencesactivity")]
     public class PreferencesActivity : SherlockPreferenceActivity, ISharedPreferencesOnSharedPreferenceChangeListener
     {
-        /// <summary>Logger.</summary>
+        /// <summary>Logger</summary>
         private static readonly Logger _log = Logger.Create(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         protected override void OnCreate(Bundle bundle)

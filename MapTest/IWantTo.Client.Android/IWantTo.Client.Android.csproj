@@ -55,6 +55,7 @@
       <HintPath>..\Components\googleplayservicesjellybean-16.0\lib\android\GooglePlayServicesLib.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Android" />
+    <Reference Include="Mono.Android.Export" />
     <Reference Include="mscorlib" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -78,15 +79,25 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Screens\About\AboutActivity.cs" />
     <Compile Include="Screens\Main\MainActivity.cs" />
+    <Compile Include="Screens\Messaging\MessageItemAdapter.cs" />
+    <Compile Include="Screens\Messaging\MessagingActivity.cs" />
     <Compile Include="Screens\Preferences\PreferencesActivity.cs" />
     <Compile Include="Services\BackgroundService.cs" />
+    <Compile Include="Services\ImagesService.cs" />
     <Compile Include="Services\LocationService.cs" />
+    <Compile Include="Utils\ImageUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <AndroidResource Include="Resources\Layout\DrawerListItem.axml" />
     <AndroidResource Include="Resources\Layout\AboutLayout.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\MessagingLayout.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\MessagingListRowLayout.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -125,6 +136,34 @@
     <AndroidResource Include="Resources\Drawable-xxhdpi\ic_navigation_drawer.png" />
     <AndroidResource Include="Resources\xml\preferences11after.xml" />
     <AndroidResource Include="Resources\xml\preferences11pre.xml" />
+    <AndroidResource Include="Resources\Drawable-hdpi\chat_bubble_left.9.png" />
+    <AndroidResource Include="Resources\Drawable-hdpi\chat_bubble_left_images.9.png" />
+    <AndroidResource Include="Resources\Drawable-hdpi\chat_bubble_right.9.png" />
+    <AndroidResource Include="Resources\Drawable-hdpi\chat_bubble_right_images.9.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\chat_bubble_left.9.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\chat_bubble_left_images.9.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\chat_bubble_right.9.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\chat_bubble_right_images.9.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\chat_bubble_left.9.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\chat_bubble_left_images.9.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\chat_bubble_right.9.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\chat_bubble_right_images.9.png" />
+    <AndroidResource Include="Resources\Drawable-xxhdpi\chat_bubble_left.9.png" />
+    <AndroidResource Include="Resources\Drawable-xxhdpi\chat_bubble_left_images.9.png" />
+    <AndroidResource Include="Resources\Drawable-xxhdpi\chat_bubble_right.9.png" />
+    <AndroidResource Include="Resources\Drawable-xxhdpi\chat_bubble_right_images.9.png" />
+    <AndroidResource Include="Resources\Drawable-hdpi\ic_action_attachment.png" />
+    <AndroidResource Include="Resources\Drawable-hdpi\ic_action_send_now_dark.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\ic_action_attachment.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\ic_action_send_now_dark.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\ic_action_attachment.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\ic_action_send_now_dark.png" />
+    <AndroidResource Include="Resources\Drawable-xxhdpi\ic_action_attachment.png" />
+    <AndroidResource Include="Resources\Drawable-xxhdpi\ic_action_send_now_dark.png" />
+    <AndroidResource Include="Resources\Drawable-hdpi\ic_missing_image.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\ic_missing_image.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\ic_missing_image.png" />
+    <AndroidResource Include="Resources\Drawable-xxhdpi\ic_missing_image.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IWantTo.Client.Core\IWantTo.Client.Core.Android.csproj">
