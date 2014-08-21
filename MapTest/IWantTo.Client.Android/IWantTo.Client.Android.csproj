@@ -48,11 +48,11 @@
   <ItemGroup>
     <Reference Include="ActionBarSherlock, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Components\XamarinActionBarSherlock-4.4.0.5\lib\android\ActionBarSherlock.dll</HintPath>
+      <HintPath>..\Components\XamarinActionBarSherlock-4.4.0.6\lib\android\ActionBarSherlock.dll</HintPath>
     </Reference>
     <Reference Include="GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Components\googleplayservicesjellybean-16.0\lib\android\GooglePlayServicesLib.dll</HintPath>
+      <HintPath>..\Components\googleplayservicesjellybean-19.0.0\lib\android\GooglePlayServicesLib.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="Mono.Android.Export" />
@@ -63,7 +63,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Components\XamarinActionBarSherlock-4.4.0.5\lib\android\Xamarin.Android.Support.v4.dll</HintPath>
+      <HintPath>..\Components\XamarinActionBarSherlock-4.4.0.6\lib\android\Xamarin.Android.Support.v4.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -174,18 +174,17 @@
   <ItemGroup>
     <XamarinComponentReference Include="googleplayservicesjellybean">
       <Visible>False</Visible>
-      <Version>16.0</Version>
+      <Version>19.0.0</Version>
     </XamarinComponentReference>
     <XamarinComponentReference Include="xamandroidsupportv4-18">
       <Visible>False</Visible>
-      <Version>20.0.0</Version>
+      <Version>20.0.0.3</Version>
     </XamarinComponentReference>
     <XamarinComponentReference Include="XamarinActionBarSherlock">
       <Visible>False</Visible>
-      <Version>4.4.0.5</Version>
+      <Version>4.4.0.6</Version>
     </XamarinComponentReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
      Other similar extension points exist, see Microsoft.Common.targets.
