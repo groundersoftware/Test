@@ -8,7 +8,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:paddingTop="5dp"
         android:paddingBottom="5dp"
         android:background="@android:color/white">
         <EditText
@@ -21,6 +20,9 @@
             android:singleLine="true"
             android:hint="@string/MessagingLayout.WriteMessage.Hint"
             android:inputType="textCapSentences|textMultiLine"
+            android:background="@android:color/white"
+            android:paddingTop="8dp"
+            android:paddingLeft="2dp"
             android:textSize="16sp"
             android:maxLength="500" />
         <ImageButton
@@ -31,9 +33,9 @@
             android:src="@drawable/ic_action_attachment"
             android:background="?android:selectableItemBackground"
             android:onClick="OnAttachAttachment"
+            android:paddingTop="5dp"
             android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginRight="5dp" />
         <ImageButton
             android:id="@+id/MessagingLayout.SendButton"
             android:layout_width="wrap_content"
@@ -42,15 +44,17 @@
             android:src="@drawable/ic_action_send_now_dark"
             android:background="?android:selectableItemBackground"
             android:onClick="OnSend"
+            android:paddingTop="5dp"
             android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginRight="5dp" />
     </LinearLayout>
     <ListView
         android:id="@+id/MessagingLayout.MessageList"
         android:layout_above="@id/MessagingLayout.Bottom_Write_Bar"
         android:layout_alignParentTop="true"
         android:layout_width="match_parent"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
         android:divider="@null"
         android:smoothScrollbar="false"
         android:layout_height="0dp" />
